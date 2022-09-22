@@ -1,0 +1,125 @@
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-white: hsl(0, 0%, 100%, 0.1);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 20%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+* , ::after, ::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 15px;
+    font-family: 'Overpass', sans-serif;
+}
+
+body {
+    background-color: var(--very-dark-blue);
+    height: 100vh;
+    display: flex;flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rating, .thank-you{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 20px;
+    width: min(90%, 335px);
+    background-color: var(--dark-blue);
+    border-radius: 20px;
+}
+
+
+.rating img {
+    align-self: flex-start;
+}
+
+.rating-result {
+    color: var(--orange) !important;
+    background-color: hsl(210, 13%, 24%);
+    padding: 0.5rem;
+    border-radius: 1.5rem;
+}
+
+.rating p, .thank-you p:not(.rating-result) {
+    color: var(--white);
+    opacity: 0.5
+}
+
+.thank-you p {
+    text-align: center;
+}
+
+
+.rating-numbers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+h2{
+    color: var(--white);
+}
+
+.rating-numbers p, .circle-border {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-white);
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.circle-border {
+    padding: 0.5rem;
+}
+
+.rating-numbers p:hover{
+    background-color: var(--orange);
+}
+
+button {
+    color: var(--white);
+    width: 100%;
+    height: 3rem;
+    background-color: var(--orange);
+    border-radius: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--white);
+    color: var(--orange);
+}
+
+.thank-you {
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    display: none;
+}
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
