@@ -118,6 +118,7 @@ button:hover {
 .attribution {
   font-size: 11px;
   text-align: center;
+  color: var(--medium-grey)
 }
 
 .attribution a {
